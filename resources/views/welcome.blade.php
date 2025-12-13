@@ -546,9 +546,6 @@
                     break;
                 // Resource Buttons
 
-                case 'Resource oAuth2 Token':
-                    await retrieveOAuth2Token(btn);
-                    break;
 
                 case 'getAllResources':
                     await getAllResources(btn);
