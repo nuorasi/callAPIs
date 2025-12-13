@@ -43,6 +43,7 @@ class ProxyController extends Controller
 //        return response()->json($res->json(), $res->status());
 //    }
 
+//Proxy Functions for Rostering
     public function oneRosterGetAllUsers()
     {
         $baseUrl = config('services.oneroster.base_url'); // e.g. https://oneroster.myscuta.com or
@@ -657,8 +658,168 @@ class ProxyController extends Controller
             ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
     }
 
+//Proxy Functions for Rostering
+
+    public function oneRosterGetAllCategories()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
+
+        Log::info('in oneRosterGetAllCategories baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetAllCategories', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
 
 
+    public function oneRosterGetAllLineItems()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
 
+        Log::info('in oneRosterGetAllLineItems baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetAllLineItems', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
+
+
+    public function oneRosterGetAllResults()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
+
+        Log::info('in oneRosterGetAllResults baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetAllResults', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
+
+
+    public function oneRosterGetAllScoreScales()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
+
+        Log::info('in oneRosterGetAllScoreScales baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetAllScoreScales', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
+
+
+//Proxy Functions for Rostering
+
+    public function oneRosterGetAllResources()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
+
+        Log::info('in oneRosterGetAllResources baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetAllResources', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
+
+    public function oneRosterGetResource()
+    {
+        $baseUrl = config('services.oneroster.base_url');
+        $clientId = config('services.oneroster.client_id');
+        $clientSecret = config('services.oneroster.client_secret');
+
+        Log::info('in oneRosterGetResource baseUrl=' . $baseUrl);
+
+        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+
+        // The sourcedId you want to send
+        $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
+
+        $res = Http::withToken($token)
+            ->acceptJson()
+            ->timeout(120)
+            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetResource', [
+                'sourcedId'     => $sourcedId,
+                'client_id'     => $clientId,
+                'client_secret' => $clientSecret,
+            ]);
+
+        return response($res->body(), $res->status())
+            ->header('Content-Type', $res->header('Content-Type') ?? 'application/json');
+    }
 
 }

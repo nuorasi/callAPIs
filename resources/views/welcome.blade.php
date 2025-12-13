@@ -51,19 +51,29 @@
 </head>
 
 <body>
-<h1>OneRoster/SCUTA API Dashboard</h1>
+<h1 style="margin-top: -30px;">OneRoster/SCUTA API Dashboard</h1>
 
+<!--
+######
+#     #  ####   ####  ##### ###### #####  # #    #  ####
+#     # #    # #        #   #      #    # # ##   # #    #
+######  #    #  ####    #   #####  #    # # # #  # #
+#   #   #    #      #   #   #      #####  # #  # # #  ###
+#    #  #    # #    #   #   #      #   #  # #   ## #    #
+#     #  ####   ####    #   ###### #    # # #    #  ####
+
+-->
 <div id="dashboard-container" style="max-width:1200px; margin:0 auto;">
-
+<h2 style="text-align:right; color:#777777;">Rostering</h2>
     <button onclick="window.open('https://certification.imsglobal.org/certification/or12cts/launch.html', '_blank')"
             style="margin-bottom: 50px;">
-        Initiate a OneRoster Certification Session
+        Initiate a OneRoster Rostering Certification Session
     </button>
 
     <div class="grid">
         @php
             $buttons = [
-             'Retrieve OAuth2 Token',
+             'Rostering OAuth2 Token',
              'getAllUsers',
              'getAllAcademicSessions',
              'getAcademicSession',
@@ -126,8 +136,155 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
          "
-    ></div>
+    >
 
+    </div>
+</div>
+<hr style="border:0; border-top:1px solid #aaaaaa; margin:24px 0; margin-top:50px">
+<!--
+  #####
+ #     # #####    ##   #####  ###### #####   ####   ####  #    #
+ #       #    #  #  #  #    # #      #    # #    # #    # #   #
+ #  #### #    # #    # #    # #####  #####  #    # #    # ####
+ #     # #####  ###### #    # #      #    # #    # #    # #  #
+ #     # #   #  #    # #    # #      #    # #    # #    # #   #
+  #####  #    # #    # #####  ###### #####   ####   ####  #    #
+
+
+
+-->
+<div id="dashboard-container-gradebook" style="max-width:1200px; margin:0 auto; margin-top:50px;">
+    <h2 style="text-align:right; color:#777777;">Gradebook</h2>
+    <button onclick="window.open('https://certification.imsglobal.org/certification/or12cts/launch.html', '_blank')"
+            style="margin-bottom: 50px;">
+        Initiate a OneRoster Gradebook Certification Session
+    </button>
+
+    <div class="grid">
+        <button onclick="handleAction('gbOauthToken', this)">
+            Gradebook OAuth2 Token
+        </button>
+        @php
+            $gbButtons = [
+            'getAllCategories',
+             'getAllLineItems',
+             'getAllResults',
+             'getAllScoreScales',
+         ];
+        @endphp
+
+        @foreach ($gbButtons as $gbButton)
+            <button
+                type="button"
+                class="api-btn"
+                onclick="handleAction('{{ $gbButton }}', this)"
+            >
+                {{ $gbButton }}
+                <span class="status-icon">✔</span>
+            </button>
+        @endforeach
+    </div>
+
+    <div id="gbTerminal"
+         style="
+            margin-top:20px;
+            background:#0b0f14;
+            color:#22c55e;
+            border:1px solid #1f2937;
+            border-radius:10px;
+            padding:14px;
+            height:420px;
+            overflow:auto;
+
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+            font-size:17px;
+            line-height:1.45;
+            letter-spacing:0.01em;
+
+            white-space:pre-wrap;
+            word-break:break-word;
+            tab-size:2;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+         "
+    >
+
+    </div>
+</div>
+<hr style="border:0; border-top:1px solid #aaaaaa; margin:24px 0; margin-top:50px">
+
+<!--
+ ######
+ #     # ######  ####   ####  #    # #####   ####  ######  ####
+ #     # #      #      #    # #    # #    # #    # #      #
+ ######  #####   ####  #    # #    # #    # #      #####   ####
+ #   #   #           # #    # #    # #####  #      #           #
+ #    #  #      #    # #    # #    # #   #  #    # #      #    #
+ #     # ######  ####   ####   ####  #    #  ####  ######  ####
+
+
+-->
+<div id="dashboard-container-resources" style="max-width:1200px; margin:0 auto; margin-top:50px;">
+    <h3 style="text-align:right; color:#777777;">Resources</h3>
+    <button onclick="window.open('https://certification.imsglobal.org/certification/or12cts/launch.html', '_blank')"
+            style="margin-bottom: 50px;">
+        Initiate a OneRoster Resources Certification Session
+    </button>
+
+    <div class="grid">
+        <button onclick="handleAction('reOauthToken', this)">
+            Resources OAuth2 Token
+        </button>
+        @php
+            $buttons = [
+             'Resources OAuth2 Token',
+             'getAllResources',
+             'getResource',
+
+
+         ];
+        @endphp
+
+        @foreach ($buttons as $button)
+            <button
+                type="button"
+                class="api-btn"
+                onclick="handleAction('{{ $button }}', this)"
+            >
+                {{ $button }}
+                <span class="status-icon">✔</span>
+            </button>
+        @endforeach
+    </div>
+
+    <div id="reTerminal"
+         style="
+            margin-top:20px;
+            background:#0b0f14;
+            color:#22c55e;
+            border:1px solid #1f2937;
+            border-radius:10px;
+            padding:14px;
+            height:420px;
+            overflow:auto;
+
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+            font-size:17px;
+            line-height:1.45;
+            letter-spacing:0.01em;
+
+            white-space:pre-wrap;
+            word-break:break-word;
+            tab-size:2;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+         "
+    >
+
+    </div>
+</div>
     <script>
         // ---------- Status helpers ----------
 
@@ -186,6 +343,12 @@
         function termEl() { return document.getElementById('terminal'); }
         function termClear() { termEl().textContent = ''; }
 
+        function gbTermEl() { return document.getElementById('gbTerminal'); }
+        function gbTermClear() { gbTermEl().textContent = ''; }
+
+        function reTermEl() { return document.getElementById('reTerminal'); }
+        function reTermClear() { reTermEl().textContent = ''; }
+
         function termWrite(line, color = '#22c55e') {
             const t = termEl();
             const span = document.createElement('span');
@@ -206,16 +369,63 @@
         function termWriteJson(obj) {
             termWrite(JSON.stringify(obj, null, 2));
         }
+        //Gradebook
 
-        // ---------- Button router ----------
+        function gbTermWrite(line, color = '#22c55e') {
+            const t = gbTermEl();
+            const span = document.createElement('span');
+            span.style.color = color;
+            span.textContent = line + "\n";
+            t.appendChild(span);
+            t.scrollTop = t.scrollHeight;
+        }
+
+        function gbTermWriteItalic(text) {
+            const t = gbTermEl();
+            const em = document.createElement('em');
+            em.textContent = text + "\n";
+            t.appendChild(em);
+            t.scrollTop = t.scrollHeight;
+        }
+
+        function gbTermWriteJson(obj) {
+            gbTermWrite(JSON.stringify(obj, null, 2));
+        }
+        // Resources
+
+        function reTermWrite(line, color = '#22c55e') {
+            const t = reTermEl();
+            const span = document.createElement('span');
+            span.style.color = color;
+            span.textContent = line + "\n";
+            t.appendChild(span);
+            t.scrollTop = t.scrollHeight;
+        }
+
+        function reTermWriteItalic(text) {
+            const t = reTermEl();
+            const em = document.createElement('em');
+            em.textContent = text + "\n";
+            t.appendChild(em);
+            t.scrollTop = t.scrollHeight;
+        }
+
+        function reTermWriteJson(obj) {
+            reTermWrite(JSON.stringify(obj, null, 2));
+        }
+        // ---------- Button router ----------/
       async function handleAction(action, btn) {
             console.log('Button clicked:', action);
             termClear();
-            clearButtonStatus(btn);
+            gbTermClear();
+            reTermClear();
+            clearButtonStatus(btn)
             setButtonLoading(btn);
 
             switch (action) {
-                case 'Retrieve OAuth2 Token':
+
+                // Rostering Buttons
+                case 'Rostering OAuth2 Token':
                     await retrieveOAuth2Token(btn);
                     break;
 
@@ -316,12 +526,53 @@
                     await getDemographics(btn);
                     break;
 
+                // Gradebook Buttons
+
+
+                case 'getAllCategories':
+                    await getAllCategories(btn);
+                    break;
+
+                case 'getAllLineItems':
+                    await getAllLineItems(btn);
+                    break;
+
+                case 'getAllResults':
+                    await  getAllResults(btn);
+                    break;
+
+                case 'getAllScoreScales':
+                    await getAllScoreScales(btn);
+                    break;
+                // Resource Buttons
+
+                case 'Resource oAuth2 Token':
+                    await retrieveOAuth2Token(btn);
+                    break;
+
+                case 'getAllResources':
+                    await getAllResources(btn);
+                    break;
+
+                case 'getResource':
+                    await getResource(btn);
+                    break;
+
+///general handler
+                case 'gbOauthToken':
+                    gbRetrieveOAuth2Token(btn);
+                    break;
+
+                case 'reOauthToken':
+                    reRetrieveOAuth2Token(btn);
+                    break;
+
                 default:
                     alert('No handler defined for ' + action);
             }
         }
 
-        // ---------- API functions ----------
+        // ---------- API functions for Rostering ----------
         async function retrieveOAuth2Token(btn) {
             termWrite('Requesting token via Laravel proxy...');
 
@@ -353,8 +604,9 @@
             }
         }
 
+
         async function getAllUsers(btn) {
-            termWrite('Calling getAllUsers...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllUsers');
             termWriteItalic('This API typically takes ~20 seconds...');
 
             try {
@@ -386,8 +638,9 @@
             }
         }
         async function getAllAcademicSessions(btn) {
-            termWrite('Calling getAllAcademicSessions...');
-            termWriteItalic('This API typically takes ~20 seconds...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllAcademicSessions');
+
+          //  termWriteItalic('This API typically takes ~20 seconds...');
 
             try {
                 const res = await fetch('/proxy/oneRosterGetAllAcademicSessions', {
@@ -422,8 +675,8 @@
 
 
         async function getAcademicSession(btn) {
-            termWrite('Calling getAcademicSession...');
-          //  termWriteItalic('This API typically takes ~20 seconds...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAcademicSession');
+            //  termWriteItalic('This API typically takes ~20 seconds...');
             setButtonLoading(btn);
 
             try {
@@ -458,8 +711,8 @@
         }
 
         async  function getAllOrgs(btn) {
-            termWrite('Calling getAllOrgs...');
-           // termWriteItalic('This API typically takes ~20 seconds...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllOrgs');
+            // termWriteItalic('This API typically takes ~20 seconds...');
 
             setButtonLoading(btn);
 
@@ -495,7 +748,7 @@
         }
 
         async function getOrg(btn) {
-            termWrite('Calling getOrg...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetOrg');
 
             setButtonLoading(btn);
 
@@ -532,7 +785,7 @@
         }
 
         async function getUser(btn) {
-            termWrite('Calling getUser...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetUser');
 
             setButtonLoading(btn);
 
@@ -568,8 +821,8 @@
         }
 
         async function getAllCourses(btn) {
-            termWrite('Calling getAllCourses...');
-          //  termWriteItalic('This API typically takes ~20 seconds...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllCourses');
+            //  termWriteItalic('This API typically takes ~20 seconds...');
 
             setButtonLoading(btn);
 
@@ -605,7 +858,7 @@
         }
 
         async function getCourse(btn) {
-            termWrite('Calling getCourse...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetCourse');
 
             setButtonLoading(btn);
 
@@ -641,7 +894,7 @@
         }
 
         async function getAllClasses(btn) {
-            termWrite('Calling getAllClasses...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllClasses');
 
             setButtonLoading(btn);
 
@@ -677,7 +930,7 @@
         }
 
         async function getClass(btn) {
-            termWrite('Calling getClass...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetClass');
 
             setButtonLoading(btn);
 
@@ -713,7 +966,7 @@
         }
 
         async function getAllEnrollments(btn) {
-            termWrite('Calling getAllEnrollments...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllEnrollments');
             termWriteItalic('This API typically takes ~20 seconds...');
 
             setButtonLoading(btn);
@@ -750,7 +1003,7 @@
         }
 
         async function getEnrollment(btn) {
-            termWrite('Calling getEnrollment...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetEnrollment');
 
             setButtonLoading(btn);
 
@@ -786,7 +1039,7 @@
         }
 
         async function getAllGradingPeriods(btn) {
-            termWrite('Calling getAllGradingPeriods...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllGradingPeriods');
 
             setButtonLoading(btn);
 
@@ -822,7 +1075,7 @@
         }
 
         async function getGradingPeriod(btn) {
-            termWrite('Calling getGradingPeriod...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetGradingPeriod');
 
             setButtonLoading(btn);
 
@@ -858,7 +1111,7 @@
         }
 
         async function getAllTerms(btn) {
-            termWrite('Calling getAllTerms...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllTerms');
 
             setButtonLoading(btn);
 
@@ -894,7 +1147,7 @@
         }
 
         async  function getTerm(btn) {
-            termWrite('Calling getTerm...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetTerm');
 
             setButtonLoading(btn);
 
@@ -930,7 +1183,7 @@
         }
 
         async function getAllSchools(btn) {
-            termWrite('Calling getAllSchools...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllSchools');
 
             setButtonLoading(btn);
 
@@ -966,7 +1219,7 @@
         }
 
         async function getSchool(btn) {
-            termWrite('Calling getSchool...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetSchool');
 
             setButtonLoading(btn);
 
@@ -1002,7 +1255,7 @@
         }
 
         async function getAllTeachers(btn) {
-            termWrite('Calling getAllTeachers...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllTeachers');
             termWriteItalic('This API typically takes ~15 seconds...');
 
             setButtonLoading(btn);
@@ -1039,7 +1292,7 @@
         }
 
         async function getTeacher(btn) {
-            termWrite('Calling getTeacher...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetTeacher');
 
             setButtonLoading(btn);
 
@@ -1075,7 +1328,7 @@
         }
 
         async function getAllStudents(btn) {
-            termWrite('Calling getAllStudents...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllStudents');
             termWriteItalic('This API typically takes ~20 seconds...');
 
             setButtonLoading(btn);
@@ -1112,7 +1365,7 @@
         }
 
         async function getStudent(btn) {
-            termWrite('Calling getStudent...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetStudent');
 
             setButtonLoading(btn);
 
@@ -1148,7 +1401,7 @@
         }
 
         async  function getAllDemographics(btn) {
-            termWrite('Calling getAllDemographics...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllDemographics');
 
             setButtonLoading(btn);
 
@@ -1184,7 +1437,7 @@
         }
 
         async  function getDemographics(btn) {
-            termWrite('Calling getDemographics...');
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetDemographics');
 
             setButtonLoading(btn);
 
@@ -1217,9 +1470,299 @@
                 setButtonFail(btn);
                 termWrite('Request failed: ' + (e?.message || e));
             }
+
+        }
+
+        // ---------- API functions for Gradebook ----------
+
+        async function gbRetrieveOAuth2Token(btn) {
+            gbTermWrite('Requesting token via Laravel proxy...');
+
+            try {
+                const res = await fetch('/proxy/oauth-token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const raw = await res.text();
+                gbTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    gbTermWriteJson(JSON.parse(raw));
+                } catch {
+                    gbTermWrite(raw);
+                }
+
+            } catch (err) {
+                setButtonFail(btn);
+                gbTermWrite('Request failed: ' + (err?.message || err));
+            }
+        }
+
+
+        async  function getAllCategories(btn) {
+            gbTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllCategories');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetAllCategories', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                gbTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    gbTermWriteJson(JSON.parse(raw));
+                } catch {
+                    gbTermWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                gbTermWrite('Request failed: ' + (e?.message || e));
+            }
+
+        }
+        async  function getAllLineItems(btn) {
+            gbTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllLineItems');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetAllLineItems', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                gbTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    gbTermWriteJson(JSON.parse(raw));
+                } catch {
+                    gbTermWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                gbTermWrite('Request failed: ' + (e?.message || e));
+            }
+
+        }
+
+        async  function getAllResults(btn) {
+            gbTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllResults');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetAllResults', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                gbTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    gbTermWriteJson(JSON.parse(raw));
+                } catch {
+                    gbTermWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                gbTermWrite('Request failed: ' + (e?.message || e));
+            }
+
+        }
+
+        async  function getAllScoreScales(btn) {
+            gbTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllScoreScales');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetAllScoreScales', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                gbTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    gbTermWriteJson(JSON.parse(raw));
+                } catch {
+                    gbTermWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                gbTermWrite('Request failed: ' + (e?.message || e));
+            }
+
+        }
+
+        // ---------- API functions for Resources ----------
+
+        async function reRetrieveOAuth2Token(btn) {
+            reTermWrite('Requesting token via Laravel proxy...');
+
+            try {
+                const res = await fetch('/proxy/oauth-token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({})
+                });
+
+                const raw = await res.text();
+                reTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    reTermWriteJson(JSON.parse(raw));
+                } catch {
+                    reTermWrite(raw);
+                }
+
+            } catch (err) {
+                setButtonFail(btn);
+                reTermWrite('Request failed: ' + (err?.message || err));
+            }
+        }
+
+
+        async  function getAllResources(btn) {
+            reTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllResources');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetAllResources', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                reTermWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    reTermWriteJson(JSON.parse(raw));
+                } catch {
+                    reTermWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                reTermWrite('Request failed: ' + (e?.message || e));
+            }
+
+        }
+
+        async  function getResource(btn) {
+            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetResource');
+
+            setButtonLoading(btn);
+
+            try {
+                const res = await fetch('/proxy/oneRosterGetResource', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        sourcedId: 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3'
+                    })
+                });
+
+                const raw = await res.text();
+                termWrite(`HTTP ${res.status}`);
+
+                res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
+
+                try {
+                    termWriteJson(JSON.parse(raw));
+                } catch {
+                    termWrite(raw);
+                }
+
+            } catch (e) {
+                setButtonFail(btn);
+                termWrite('Request failed: ' + (e?.message || e));
+            }
+
         }
     </script>
 
-</div>
+
 </body>
 </html>

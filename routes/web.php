@@ -8,6 +8,8 @@ Route::post('/proxy/oauth-token', [ProxyController::class, 'oauthToken'])
     ->withoutMiddleware([Authenticate::class])
     ->name('proxy.oauthToken');
 
+
+// Routes for Rostering
 Route::post('/proxy/oneRosterGetAllUsers', [ProxyController::class, 'oneRosterGetAllUsers'])
     ->withoutMiddleware([Authenticate::class]);
 
@@ -79,6 +81,32 @@ Route::post('/proxy/oneRosterGetAllDemographics', [ProxyController::class, 'oneR
 
 Route::post('/proxy/oneRosterGetDemographics', [ProxyController::class, 'oneRosterGetDemographics'])
     ->withoutMiddleware([Authenticate::class]);
+
+// Routes for Gradebook
+
+Route::post('/proxy/oneRosterGetAllCategories', [ProxyController::class, 'oneRosterGetAllCategories'])
+    ->withoutMiddleware([Authenticate::class]);
+
+Route::post('/proxy/oneRosterGetAllLineItems', [ProxyController::class, 'oneRosterGetAllLineItems'])
+    ->withoutMiddleware([Authenticate::class]);
+
+Route::post('/proxy/oneRosterGetAllResults', [ProxyController::class, 'oneRosterGetAllResults'])
+    ->withoutMiddleware([Authenticate::class]);
+
+Route::post('/proxy/oneRosterGetAllScoreScales', [ProxyController::class, 'oneRosterGetAllScoreScales'])
+    ->withoutMiddleware([Authenticate::class]);
+
+
+
+// Routes for Resources
+
+
+Route::post('/proxy/oneRosterGetAllResources', [ProxyController::class, 'oneRosterGetAllResources'])
+    ->withoutMiddleware([Authenticate::class]);
+
+Route::post('/proxy/oneRosterGetResource', [ProxyController::class, 'oneRosterGetResource'])
+    ->withoutMiddleware([Authenticate::class]);
+
 
 
 Route::get('/', function () {
