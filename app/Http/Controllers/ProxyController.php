@@ -52,6 +52,7 @@ class ProxyController extends Controller
         log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
         $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         $res = Http::withToken($token)
             ->acceptJson()
