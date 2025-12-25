@@ -35,37 +35,6 @@ class ProxyController extends Controller
         return response()->json($response->json(), $response->status());
     }
 
-//    public function oauthToken(Request $request)
-//    {
-//        // Put these in .env for safety
-//        $baseUrl = config('services.oneroster.remote_base_url'); // e.g. https://oneroster.myscuta.com
-//        $clientId = config('services.oneroster.client_id');
-//        $clientSecret = config('services.oneroster.client_secret');
-//        Log::info('in oauthToken baseUrl=' . ($baseUrl ?? 'NULL'));
-//        $response = Http::asForm()
-//            ->timeout(30)
-//            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetNewOauth2Token', [
-//                'grant_type' => 'client_credentials',
-//                'client_id' => $clientId,
-//                'client_secret' => $clientSecret,
-//                // add scope if required:
-//                // 'scope' => '...'
-//            ]);
-//
-//        return response()->json($response->json(), $response->status());
-//    }
-//    public function oneRosterGetAllUsers(Request $request)
-//    {
-//        $baseUrl = rtrim(env('ONEROSTER_BASE_URL'), '/');
-//        $token   = env('ONEROSTER_ACCESS_TOKEN'); // or load from DB if you store it
-//
-//        $res = Http::withToken($token)
-//            ->acceptJson()
-//            ->timeout(120)
-//            ->post($baseUrl . '/api/oneRosterGetAllUsers');
-//
-//        return response()->json($res->json(), $res->status());
-//    }
 
 //Proxy Functions for Rostering
     public function oneRosterGetAllUsers()
@@ -93,10 +62,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllAcademicSessions()
     {
-       $baseUrl = config('services.oneroster.remote_base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
-        log::info('in  oneRosterGetAllAcademicSessions baseUrl=' . $baseUrl);
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
+
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
