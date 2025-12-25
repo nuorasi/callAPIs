@@ -35,7 +35,7 @@ return [
         ],
     ],
     'oneroster' => [
-        'base_url' => env('ONEROSTER_BASE_URL', 'https://onerosterscuta.nuorasi.com'),
+        'base_url' => env('ONEROSTER_BASE_URL', 'https://oneroster.myscuta.com'),
         'client_id' => env('ONEROSTER_CLIENT_ID'),
         'client_secret' => env('ONEROSTER_CLIENT_SECRET'),
     ],

@@ -51,7 +51,9 @@ class ProxyController extends Controller
         $clientSecret = config('services.oneroster.client_secret');
         log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
+        $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         $res = Http::withToken($token)
@@ -73,7 +75,8 @@ class ProxyController extends Controller
         $clientSecret = config('services.oneroster.client_secret');
         log::info('in  oneRosterGetAllAcademicSessions baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         $res = Http::withToken($token)
             ->acceptJson()
@@ -95,7 +98,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -121,7 +125,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -147,7 +152,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '00000000-0000-0000-0000-000000000002';
@@ -173,7 +179,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '9ea819f9-d1b7-48e6-a869-2742d2d5527c';
@@ -199,7 +206,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -225,7 +233,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '561279a5-75a0-4f43-ad02-77c8229bb786';
@@ -251,7 +260,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -277,7 +287,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '8b91e50d-4ce1-4810-8a91-2ad55c10e3c0';
@@ -303,7 +314,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -329,7 +341,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'b9421388-73fa-474c-b0f9-751a2495201c';
@@ -355,7 +368,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -381,7 +395,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -407,7 +422,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -433,7 +449,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '273765d9-7955-496c-aeeb-3e8b7cb4f5b4';
@@ -459,7 +476,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -485,7 +503,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'ca6a7605-b0f7-4852-9b9a-bc8b586bf737';
@@ -511,7 +530,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -537,7 +557,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'ce080009-6406-4137-9abf-b88987ea317d';
@@ -563,7 +584,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -589,7 +611,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = '9ea819f9-d1b7-48e6-a869-2742d2d5527c';
@@ -615,7 +638,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'x63765d9-7955-496c-aeeb-3e8b7cb4f5a3';
@@ -641,7 +665,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -669,7 +694,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAllCategories baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -696,7 +722,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAllLineItems baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -723,7 +750,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAllResults baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -750,7 +778,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAllScoreScales baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -779,7 +808,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetAllResources baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
@@ -805,7 +835,8 @@ class ProxyController extends Controller
 
         Log::info('in oneRosterGetResource baseUrl=' . $baseUrl);
 
-        $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
+        $token = config('services.oneroster.remote_bearer');
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
 
         // The sourcedId you want to send
         $sourcedId = 'e443ec03-6129-43c7-a12c-6c9db31f1b4f';
