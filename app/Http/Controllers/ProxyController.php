@@ -85,11 +85,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAcademicSession()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -112,11 +112,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllOrgs()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -139,11 +139,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetOrg()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -166,11 +166,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetUser()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -193,11 +193,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllCourses()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -220,11 +220,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetCourse()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -247,11 +247,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllClasses()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -274,11 +274,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetClass()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -301,11 +301,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllEnrollments()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -328,11 +328,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetEnrollment()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -355,11 +355,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllGradingPeriods()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -382,11 +382,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetGradingPeriod()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -409,11 +409,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllTerms()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -436,11 +436,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetTerm()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -463,11 +463,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllSchools()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -490,11 +490,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetSchool()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -517,11 +517,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllTeachers()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -544,11 +544,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetTeacher()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -571,11 +571,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllStudents()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -598,11 +598,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetStudent()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -625,11 +625,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllDemographics()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -652,11 +652,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetDemographics()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAcademicSession baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -681,11 +681,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllCategories()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAllCategories baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -709,11 +709,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllLineItems()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAllLineItems baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -737,11 +737,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllResults()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAllResults baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -765,11 +765,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllScoreScales()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAllScoreScales baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -795,11 +795,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetAllResources()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetAllResources baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
@@ -822,11 +822,11 @@ class ProxyController extends Controller
 
     public function oneRosterGetResource()
     {
-        $baseUrl = config('services.oneroster.base_url');
+        $baseUrl = config('services.oneroster.remote_base_url');
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
+        log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
-        Log::info('in oneRosterGetResource baseUrl=' . $baseUrl);
 
         $token = config('services.oneroster.remote_bearer');
         Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
