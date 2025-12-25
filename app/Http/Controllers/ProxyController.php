@@ -14,7 +14,7 @@ class ProxyController extends Controller
     public function oauthToken(Request $request)
     {
         // Put these in .env for safety
-        $baseUrl = config('services.oneroster.base_url'); // e.g. https://oneroster.myscuta.com
+        $baseUrl = config('services.remote_base_url'); // e.g. https://oneroster.myscuta.com
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
         log::info('in  oauthToken baseUrl=' . $baseUrl);
