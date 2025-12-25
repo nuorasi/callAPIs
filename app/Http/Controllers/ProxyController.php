@@ -779,7 +779,7 @@ class ProxyController extends Controller
         Log::info('in oneRosterGetAllResources baseUrl=' . $baseUrl);
 
         $token = env('ONEROSTER_REMOTE_BEARER'); // token valid on oneroster.myscuta.com
-
+        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
         // The sourcedId you want to send
         $sourcedId = 'f2bc0255-a13a-48d5-ac17-251789092850';
 
