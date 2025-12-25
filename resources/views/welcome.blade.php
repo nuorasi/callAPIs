@@ -964,7 +964,7 @@
 
         async function getAllEnrollments(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllEnrollments');
-            termWriteItalic('This API typically takes ~20 seconds...');
+            termWriteItalic('This API typically takes ~8 seconds...');
 
             setButtonLoading(btn);
 
