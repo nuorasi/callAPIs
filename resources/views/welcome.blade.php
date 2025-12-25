@@ -571,7 +571,7 @@
 
         // ---------- API functions for Rostering ----------
         async function retrieveOAuth2Token(btn) {
-            termWrite('Requesting token via Laravel proxy...');
+            termWrite('Requesting oAuth2 token via Laravel proxy...');
 
             try {
                 const res = await fetch('/proxy/oauth-token', {
@@ -604,7 +604,7 @@
 
         async function getAllUsers(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllUsers');
-            termWriteItalic('This API typically takes ~20 seconds...');
+            termWriteItalic('This API typically takes <20 seconds...');
 
             try {
                 const res = await fetch('/proxy/oneRosterGetAllUsers', {
@@ -637,7 +637,7 @@
         async function getAllAcademicSessions(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllAcademicSessions');
 
-          //  termWriteItalic('This API typically takes ~20 seconds...');
+          //  termWriteItalic('This API typically takes <20 seconds...');
 
             try {
                 const res = await fetch('/proxy/oneRosterGetAllAcademicSessions', {
@@ -673,7 +673,7 @@
 
         async function getAcademicSession(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAcademicSession');
-            //  termWriteItalic('This API typically takes ~20 seconds...');
+            //  termWriteItalic('This API typically takes <20 seconds...');
             setButtonLoading(btn);
 
             try {
@@ -709,7 +709,7 @@
 
         async  function getAllOrgs(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllOrgs');
-            // termWriteItalic('This API typically takes ~20 seconds...');
+            // termWriteItalic('This API typically takes <20 seconds...');
 
             setButtonLoading(btn);
 
@@ -819,7 +819,7 @@
 
         async function getAllCourses(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllCourses');
-            //  termWriteItalic('This API typically takes ~20 seconds...');
+            //  termWriteItalic('This API typically takes <20 seconds...');
 
             setButtonLoading(btn);
 
@@ -964,7 +964,7 @@
 
         async function getAllEnrollments(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllEnrollments');
-            termWriteItalic('This API typically takes ~8 seconds...');
+            termWriteItalic('This API typically takes <8 seconds...');
 
             setButtonLoading(btn);
 
@@ -1253,7 +1253,7 @@
 
         async function getAllTeachers(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllTeachers');
-            termWriteItalic('This API typically takes ~15 seconds...');
+            termWriteItalic('This API typically takes <15 seconds...');
 
             setButtonLoading(btn);
 
@@ -1326,7 +1326,7 @@
 
         async function getAllStudents(btn) {
             termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetAllStudents');
-            termWriteItalic('This API typically takes ~20 seconds...');
+            termWriteItalic('This API typically takes <20 seconds...');
 
             setButtonLoading(btn);
 
