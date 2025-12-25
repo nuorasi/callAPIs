@@ -73,7 +73,7 @@
     <div class="grid">
         @php
             $buttons = [
-             'Rostering OAuth2 Token',
+             'Rostering oAuth2 Token',
              'getAllUsers',
              'getAllAcademicSessions',
              'getAcademicSession',
@@ -162,7 +162,7 @@
 
     <div class="grid">
         <button onclick="handleAction('gbOauthToken', this)">
-            Gradebook OAuth2 Token
+            Gradebook oAuth2 Token
         </button>
         @php
             $gbButtons = [
@@ -234,11 +234,11 @@
 
     <div class="grid">
         <button onclick="handleAction('reOauthToken', this)">
-            Resources OAuth2 Token
+            Resources oAuth2 Token
         </button>
         @php
             $buttons = [
-             'Resources OAuth2 Token',
+
              'getAllResources',
              'getResource',
 
@@ -425,7 +425,7 @@
             switch (action) {
 
                 // Rostering Buttons
-                case 'Rostering OAuth2 Token':
+                case 'Rostering oAuth2 Token':
                     await retrieveOAuth2Token(btn);
                     break;
 
