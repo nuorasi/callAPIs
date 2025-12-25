@@ -34,14 +34,16 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-    'oneroster' => [
+
        // 'base_url' => env('ONEROSTER_BASE_URL', 'https://oneroster.myscuta.com'),
         'oneroster' => [
+            'remote_base_url' => env('ONEROSTER_REMOTE_BASE_URL'),
             'remote_bearer' => env('ONEROSTER_REMOTE_BEARER'),
+            'client_id' => env('ONEROSTER_CLIENT_ID'),
+            'client_secret' => env('ONEROSTER_CLIENT_SECRET'),
         ],
-        'client_id' => env('ONEROSTER_CLIENT_ID'),
-        'client_secret' => env('ONEROSTER_CLIENT_SECRET'),
-    ],
+
+
 
 
 ];
