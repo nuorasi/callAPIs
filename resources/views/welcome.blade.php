@@ -234,7 +234,7 @@
 
     <div class="grid">
         <button onclick="handleAction('reOauthToken', this)">
-            Resources oAuth2 Token
+            Resources oAuth2 Token...
         </button>
         @php
             $buttons = [
