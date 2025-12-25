@@ -35,7 +35,10 @@ return [
         ],
     ],
     'oneroster' => [
-        'base_url' => env('ONEROSTER_BASE_URL', 'https://oneroster.myscuta.com'),
+       // 'base_url' => env('ONEROSTER_BASE_URL', 'https://oneroster.myscuta.com'),
+        'oneroster' => [
+            'remote_bearer' => env('ONEROSTER_REMOTE_BEARER'),
+        ],
         'client_id' => env('ONEROSTER_CLIENT_ID'),
         'client_secret' => env('ONEROSTER_CLIENT_SECRET'),
     ],

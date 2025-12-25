@@ -51,10 +51,9 @@ class ProxyController extends Controller
         $clientSecret = config('services.oneroster.client_secret');
         log::info('in  oneRosterGetAllUsers baseUrl=' . $baseUrl);
 
+
         $token = config('services.oneroster.remote_bearer');
-        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
-        $token = config('services.oneroster.remote_bearer');
-        Log::info('in oneRosterGetAllResources ONEROSTER_REMOTE_BEARER=' . $token);
+        Log::info('in oneRosterGetAllResources ident 727 ONEROSTER_REMOTE_BEARER=' . $token);
 
         $res = Http::withToken($token)
             ->acceptJson()
