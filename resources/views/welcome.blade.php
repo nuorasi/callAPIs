@@ -1723,7 +1723,7 @@
         }
 
         async  function getResource(btn) {
-            termWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetResource');
+            reTermWrite('Calling https://oneroster.myscuta.com/api/oneRosterGetResource');
 
             setButtonLoading(btn);
 
@@ -1742,19 +1742,19 @@
                 });
 
                 const raw = await res.text();
-                termWrite(`HTTP ${res.status}`);
+                reTermWrite(`HTTP ${res.status}`);
 
                 res.ok ? setButtonSuccess(btn) : setButtonFail(btn);
 
                 try {
-                    termWriteJson(JSON.parse(raw));
+                    reTermWriteJson(JSON.parse(raw));
                 } catch {
-                    termWrite(raw);
+                    reTermWrite(raw);
                 }
 
             } catch (e) {
                 setButtonFail(btn);
-                termWrite('Request failed: ' + (e?.message || e));
+                reTermWrite('Request failed: ' + (e?.message || e));
             }
 
         }
