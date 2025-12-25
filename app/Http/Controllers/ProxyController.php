@@ -10,26 +10,50 @@ class ProxyController extends Controller
 {
 
 
-
     public function oauthToken(Request $request)
     {
-        // Put these in .env for safety
-        $baseUrl = config('services.oneroster.remote_base_url');
+        $baseUrl = config('services.oneroster.remote_base_url'); // e.g. https://oneroster.myscuta.com
         $clientId = config('services.oneroster.client_id');
         $clientSecret = config('services.oneroster.client_secret');
-        log::info('in  oauthToken baseUrl=' . $baseUrl);
+
+        Log::info('in oauthToken baseUrl=' . ($baseUrl ?? 'NULL'));
+
+        if (! $baseUrl) {
+            return response()->json([
+                'message' => 'Missing OneRoster base URL. Check ONEROSTER_REMOTE_BASE_URL and config cache.',
+            ], 500);
+        }
+
         $response = Http::asForm()
             ->timeout(30)
             ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetNewOauth2Token', [
                 'grant_type' => 'client_credentials',
                 'client_id' => $clientId,
                 'client_secret' => $clientSecret,
-                // add scope if required:
-                // 'scope' => '...'
             ]);
 
         return response()->json($response->json(), $response->status());
     }
+
+//    public function oauthToken(Request $request)
+//    {
+//        // Put these in .env for safety
+//        $baseUrl = config('services.oneroster.remote_base_url'); // e.g. https://oneroster.myscuta.com
+//        $clientId = config('services.oneroster.client_id');
+//        $clientSecret = config('services.oneroster.client_secret');
+//        Log::info('in oauthToken baseUrl=' . ($baseUrl ?? 'NULL'));
+//        $response = Http::asForm()
+//            ->timeout(30)
+//            ->post(rtrim($baseUrl, '/') . '/api/oneRosterGetNewOauth2Token', [
+//                'grant_type' => 'client_credentials',
+//                'client_id' => $clientId,
+//                'client_secret' => $clientSecret,
+//                // add scope if required:
+//                // 'scope' => '...'
+//            ]);
+//
+//        return response()->json($response->json(), $response->status());
+//    }
 //    public function oneRosterGetAllUsers(Request $request)
 //    {
 //        $baseUrl = rtrim(env('ONEROSTER_BASE_URL'), '/');
